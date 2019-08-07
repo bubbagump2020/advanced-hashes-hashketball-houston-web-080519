@@ -129,8 +129,9 @@ end
 def num_points_scored(player_name)
   answer = nil
   game_hash.each do |team, player_details|
-    play_array = player_details[:players]
-    play_array.each do |player_details_hash|
+     play_array = player_details[:players]
+     binding pry
+    player_details[:players].each do |player_details_hash|
       if player_details_hash[:name] == player_name
         answer = player_details_hash[:points]
       end
